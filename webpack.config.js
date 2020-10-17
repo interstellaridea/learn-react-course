@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin({ verbose: true}),
-    new CopyPlugin({ patterns: [{ from : '_redirects' }] }),
+    new CopyWebpackPlugin({ patterns: [{ from : '_redirects' }] }),
     new HtmlWebpackPlugin({ template: './app/index.html'})
   ],
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
